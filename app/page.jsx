@@ -29,22 +29,9 @@ const ctx = getNetlifyContext();
 
 export default function Page() {
     return (
-        <main >
-            <section className="flex flex-col items-start gap-3 sm:gap-4">
-                
-            </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-                <Markdown content={postDynamicContentExplainer} />
-            </section>
-            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
+        <main class="bg-gray-100 flex items-center justify-center h-screen">
+
+            
         </main>
     );
 }
