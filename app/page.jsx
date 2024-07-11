@@ -22,7 +22,7 @@ export default function Page() {
                 </div>
             </section>
             <section className="my-10 mx-8">
-                <div className=" max-w-screen-lg mx-auto p-6 border-solid border-2 rounded-lg ">
+                <div className=" max-w-screen-lg mx-auto pt-6 pr-4 pb-4 pl-4 border-solid border-2 rounded-lg ">
                     <div className="grid grid-raws-1 sm:grid-raws-1 md:grid-cols-3 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
                         <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> invchincol@gmail.com</p>
                         <p className="inline-block pb-6"><Image src={locationDot} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> Los Jesuitas 881, Providencia</p>
