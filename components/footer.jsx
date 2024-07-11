@@ -45,9 +45,10 @@ const linksCols = [
 export function Footer() {
     return (
         <footer className=" bg-[#0B0B5C]">
-            <section className=" max-w-screen-lg mx-auto p-10 md:px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 sm:gap-y-8 md:gap-y-8 lg:gap-y-0">
+            <section className=" max-w-screen-lg mx-auto">
+              <div className="w-full pl-[25%] sm:pl-[20%] md:pl-[20%] lg:pl-[11%] pr-0 pt-10 pb-0">
                 {linksCols.map((linkCol, index) => (
-                <div key={index} >
+                <div key={index} className="w-full mx-auto sm:w-6/12 md:w-6/12 lg:w-3/12 pb-10 inline-flex flex-col items-start">
                     <h5 className="font-bold text-xl text-white pb-2 ">{linkCol.colTitle}</h5>
                     <ul>
                         {linkCol.linksList.map((link, linkIndex) => (
@@ -56,6 +57,7 @@ export function Footer() {
                     </ul>
                 </div>
                 ))}
+              </div>
             </section>
             <section className="bg-[#989898] p-3">
             <p className=" mx-auto text-center font-normal text-black text-md">© Impulsa Ventas</p>

@@ -17,7 +17,7 @@ export function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-[#0B0B5C]">
+        <nav className="bg-[#0B0B5C] fixed w-full">
             <section className="max-w-screen-lg mx-auto py-3 px-6 text-white flex items-center">
                 <div className="w-full sm:w-full md:w-4/12 lg:w-4/12 flex flex-row items-center">
                     <p className="inline-block w-2/12 sm:w-2/12 md:w-auto lg:w-auto "><Image className=" inline-block h-8 w-auto" src={impulsoVentasLogo} alt="Impulso Ventas Logo" /></p>
