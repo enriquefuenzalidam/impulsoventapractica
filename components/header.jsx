@@ -28,11 +28,10 @@ export function Header() {
                     </div>
                 </div>
 
-                {/* As you may see, this UL hiddes as the window gets narrow */}
                 {!!navItems?.length && (
                 <ul className="hidden sm:hidden md:flex lg:flex justify-end w-8/12 text-right text-lg ">
                     {navItems.map((item, index) => (
-                        <li key={index} className=" inline-block text-right px-3">
+                        <li key={index} className=" inline-block text-right pl-6">
                             <Link href={item.href} className="inline-block no-underline text-nowrap text-white text-opacity-70 hover:text-opacity-100" > {item.linkText} </Link>
                         </li>
                     ))}
@@ -40,7 +39,7 @@ export function Header() {
                 )}
 
             </section>
-            {/* Dropdown menu for small screens */}
+
             {!!navItems?.length && (
             <ul className={`md:hidden lg:hidden bg-[#0B0B5C] overflow-hidden transition-all duration-300 ease-in-out ${
                 isOpen ? 'max-h-screen opacity-100 py-5 px-6' : 'max-h-0 opacity-0'
