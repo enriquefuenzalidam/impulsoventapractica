@@ -8,9 +8,9 @@ import { useState } from 'react';
 
 const navItems = [
     { linkText: 'Inicio', href: '#' },
-    { linkText: 'Quiénes Somos', href: '#' },
-    { linkText: 'Productos', href: '#' },
-    { linkText: 'Contáctanos', href: '#'}
+    { linkText: 'Quiénes Somos', href: '#quienessomos' },
+    { linkText: 'Productos', href: '#productos' },
+    { linkText: 'Contáctanos', href: '#contactanos'}
 ];
 
 export function Header() {
@@ -46,7 +46,7 @@ export function Header() {
             }`}>
                 {navItems.map((item, index) => (
                     <li key={index} className="py-2">
-                        <Link href={item.href} className="block no-underline text-white text-opacity-70 hover:text-opacity-100">
+                        <Link onClick={() => setIsOpen(!isOpen)} href={item.href} className="block no-underline text-white text-opacity-70 hover:text-opacity-100">
                             {item.linkText}
                         </Link>
                     </li>

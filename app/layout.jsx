@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="icon" href="/images/logo-dba.ico" sizes="any" />
             </head>
-            <body className="antialiased  bg-white">
+            <body className="antialiased bg-white scroll-smooth">
                 <Header />
                 {children}
                 <Footer />

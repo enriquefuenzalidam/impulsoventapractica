@@ -33,17 +33,17 @@ export default function Page() {
                             <Image className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos} alt="quiénes somos" />
                         </p>
                     </div>
-                    <div className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
+                    <div id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <div className=" mx-8 ">
-                            <h3 className=" text-4xl font-medium text-center pt-16 pb-3">Quiénes Somos</h3>
-                            <p className=" text-lg font-normal text-center pb-16 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
+                            <h3 className=" text-4xl font-medium text-center pt-20 pb-3">Quiénes Somos</h3>
+                            <p className=" text-lg font-normal text-center pb-20 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
                         </div>
                     </div>
                 </div>
 
             </section>
 
-            <section className=" bg-[#449DF7] bg-opacity-20 py-10">
+            <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 pb-10">
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center pb-3">Productos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center pb-8">Conoce nuestros productos.</p>
                 <div className=" max-w-screen-lg mx-auto pt-6 pr-4 pb-4 pl-4 grid grid-cols-1 grid-rows-3 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 gap-5">
@@ -83,7 +83,7 @@ export default function Page() {
                 </div>
             </section>
 
-            <section className="my-10 ">
+            <section id="contactanos" className=" pt-20 pb-10 ">
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center px-4 pb-3">Contáctanos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
                 <div className=" max-w-screen-lg pt-6 px-4 mx-auto ">

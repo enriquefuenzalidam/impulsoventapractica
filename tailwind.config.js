@@ -12,7 +12,7 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Helvetica Neue', 'Roboto', 'Noto Sans', 'Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Helvetica Neue', 'Arial', 'Roboto', 'Noto Sans', 'Inter', ...defaultTheme.fontFamily.sans]
             }
         }
     },
