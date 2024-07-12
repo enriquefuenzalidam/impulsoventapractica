@@ -34,7 +34,7 @@ export default function Page() {
                         </p>
                     </div>
                     <div className=" w-full sm:w-full md:w-1/2 lg:w-1/2 my-0 sm:my-0 md:my-4 lg:my-4">
-                        <div className=" mx-4 ">
+                        <div className=" mx-8 ">
                             <h3 className=" text-4xl font-medium text-center pt-16 pb-3">Quienes Somos</h3>
                             <p className=" text-lg font-normal text-center pb-16 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
                         </div>
