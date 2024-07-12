@@ -67,8 +67,8 @@ export default function Page() {
             <section className="my-10 ">
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center px-4 pb-3">Contáctanos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
-                <div className=" max-w-screen-lg px-4 mx-auto ">
-                    <div className=" mx-auto px-4 pt-6 pb-4 border-solid border-2 rounded-xl border-black border-opacity-10">
+                <div className=" max-w-screen-lg pt-6 px-4 mx-auto ">
+                    <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-xl border-black border-opacity-10">
                         <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
                             <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> invchincol@gmail.com</p>
                             <p className="inline-block pb-6"><Image src={locationDot} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> Los Jesuitas 881, Providencia</p>
