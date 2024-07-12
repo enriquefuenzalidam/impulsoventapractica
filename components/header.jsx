@@ -24,7 +24,7 @@ export function Header() {
                     <p className="inline-block w-8/12 sm:w-8/12 md:w-auto lg:w-auto text-center sm:text-center md:text-left lg:text-left ml-2"><Link className="inline-block sm:inline-block md:inline-block lg:inline-block font-light tracking-widest no-underline ml-1 text-2xl text-white text-opacity-80 capitalize" href="/">I<em>mpulso</em> V<em>entas</em></Link></p>
                     <div className="w-2/12 sm:w-2/12 md:w-auto lg:w-auto inline-block sm:inline-block md:hidden lg:hidden text-right">
                     {/* This the hamburger menu button that appears as the window gets narrow. As it is clicked, it should display the UL that hiddes as the window gets narrow, as a dropdown menu */}
-                        <p class="inline-block cursor-pointer" onClick={() => setIsOpen(!isOpen)}><Image className=" inline-block h-8 w-auto" src={hamburgerMenu} alt="Menu" /></p>
+                        <p className="inline-block cursor-pointer" onClick={() => setIsOpen(!isOpen)}><Image className=" inline-block h-8 w-auto" src={hamburgerMenu} alt="Menu" /></p>
                     </div>
                 </div>
 
