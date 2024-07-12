@@ -4,6 +4,7 @@ import envelope from 'public/images/envelope.svg';
 import locationDot from 'public/images/location-dot.svg';
 import phone from 'public/images/phone.svg';
 import fondoVentas from 'public/images/fondo-ventas1.png';
+import quienesSomos from 'public/images/quienessomos.jpg';
 
 
 export default function Page() {
@@ -13,15 +14,33 @@ export default function Page() {
             <section className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
-                        <h3 className=" mx-6 mb-8 p-3 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
-                        <h2 className=" mx-6 mb-6 uppercase text-white text-opacity-80 text-3xl font-medium leading-relaxed ">La empresa que impulsa tus ventas</h2>
-                        <p className=" mx-6 mb-16 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
-                        <p className=" mx-6 ">
+                        <h3 className=" mx-8 mb-8 p-3 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
+                        <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-medium leading-relaxed ">La empresa que impulsa tus ventas</h2>
+                        <p className=" mx-8 mb-16 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
+                        <p className=" mx-8 ">
                             <Link href="" className="py-2 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
                             <Link href="" className="py-2 px-4 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <section className=" w-full">
+
+                <div className=" max-w-screen-lg m-auto flex flex-col sm:flex-col md:flex-row lg:flex-row ">
+                    <div className=" w-full sm:w-full md:w-1/2 lg:w-1/2 my-0 sm:my-0 md:my-4 lg:my-4">
+                        <p className=" mx-0 sm:mx-0 md:mx-4 lg:mx-4 h-full ">
+                            <Image className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos} alt="" />
+                        </p>
+                    </div>
+                    <div className=" w-full sm:w-full md:w-1/2 lg:w-1/2 my-0 sm:my-0 md:my-4 lg:my-4">
+                        <div className=" mx-4 ">
+                            <h3 className=" text-4xl font-medium text-center pt-16 pb-3">Quienes Somos</h3>
+                            <p className=" text-lg font-normal text-center pb-16 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <section className=" bg-[#449DF7] bg-opacity-20 py-10">
@@ -31,7 +50,7 @@ export default function Page() {
                     <div className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 1.000 pymes/empresas</h4>
-                            <p><Image className=" m-auto" src={fondoVentas}></Image></p>
+                            <p><Image className=" m-auto" src={fondoVentas} /></p>
                             <p className=" text-lg text-black font-normal ">Potencia tu estrategia de marketing con nuestra base de datos de 1.000 contactos de pymes y empresas. Accede a una amplia gama de prospectos para impulsar tus campañas promocionales y expandir tu red de clientes potenciales de manera efectiva.</p>
                         </div>
                         <div className="bg-[#F7F7F7] border-solid border-2 rounded-b-xl border-black border-opacity-10 p-6 text-center">
@@ -42,7 +61,7 @@ export default function Page() {
                     <div className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 2.000 pymes/empresas</h4>
-                            <p><Image className=" m-auto" src={fondoVentas}></Image></p>
+                            <p><Image className=" m-auto" src={fondoVentas} /></p>
                             <p className=" text-lg text-black font-normal ">Maximiza el alcance de tu negocio con nuestra completa base de datos de 2.000 contactos de pymes y empresas. Con una amplia variedad de prospectos a tu disposición, podrás aumentar la efectividad de tus campañas de marketing y alcanzar nuevos clientes en diferentes sectores y regiones.</p>
                         </div>
                         <div className=" bg-[#F7F7F7] border-solid border-2 rounded-b-xl border-black border-opacity-10 p-6 text-center">
@@ -53,7 +72,7 @@ export default function Page() {
                     <div className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 5.000 pymes/empresas</h4>
-                            <p><Image className=" m-auto" src={fondoVentas}></Image></p>
+                            <p><Image className=" m-auto" src={fondoVentas} /></p>
                             <p className=" text-lg text-black font-normal ">Obtén una ventaja competitiva con nuestra extensa base de datos de 5.000 contactos de pymes y empresas. Con una abundancia de prospectos a tu alcance, podrás desarrollar estrategias de marketing más sólidas y llegar a una audiencia más amplia, facilitando el crecimiento y la expansión de tu negocio de manera significativa.</p>
                         </div>
                         <div className="bg-[#F7F7F7] border-solid border-2 rounded-b-xl border-black border-opacity-10 p-6 text-center">
