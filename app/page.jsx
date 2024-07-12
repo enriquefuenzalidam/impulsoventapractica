@@ -14,7 +14,7 @@ export default function Page() {
             <section className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
-                        <h3 className=" mx-8 mb-8 p-3 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
+                        <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
                         <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-medium leading-relaxed ">La empresa que impulsa tus ventas</h2>
                         <p className=" mx-8 mb-16 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
                         <p className=" mx-8 ">
