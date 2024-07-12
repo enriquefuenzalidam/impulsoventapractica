@@ -9,6 +9,7 @@ import fondoVentas from 'public/images/fondo-ventas1.png';
 export default function Page() {
     return (
         <main className="pt-12">
+            
             <section className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
@@ -22,6 +23,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+
             <section className=" bg-[#449DF7] bg-opacity-20 py-10">
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center pb-3">Productos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center pb-8">Conoce nuestros productos.</p>
@@ -61,20 +63,24 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className="my-10 mx-8">
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center pb-3">Contáctanos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-normal text-center pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
-                <div className=" max-w-screen-lg mx-auto pt-6 pr-4 pb-4 pl-4 border-solid border-2 rounded-lg border-black border-opacity-20">
-                    <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
-                        <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> invchincol@gmail.com</p>
-                        <p className="inline-block pb-6"><Image src={locationDot} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> Los Jesuitas 881, Providencia</p>
-                        <p className="inline-block pb-6"><Image src={phone} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> +56 9 5080 3505</p>
-                    </div>
-                    <div>
-                        <iframe className=" w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1981205231386!2d-70.62504321737647!3d-33.44414450478514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf80f32bae2d%3A0xa9d1ed0b6e1b4437!2sLos%20Jesuitas%20881%2C%207500000%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1713548615604!5m2!1ses!2scl"></iframe>
+
+            <section className="my-10 ">
+                <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center px-4 pb-3">Contáctanos</h3>
+                <p className=" max-w-screen-lg m-auto text-lg font-normal text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
+                <div className=" max-w-screen-lg px-4 mx-auto ">
+                    <div className=" mx-auto px-4 pt-6 pb-4 border-solid border-2 rounded-xl border-black border-opacity-10">
+                        <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
+                            <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> invchincol@gmail.com</p>
+                            <p className="inline-block pb-6"><Image src={locationDot} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> Los Jesuitas 881, Providencia</p>
+                            <p className="inline-block pb-6"><Image src={phone} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> +56 9 5080 3505</p>
+                        </div>
+                        <div>
+                            <iframe className=" w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.1981205231386!2d-70.62504321737647!3d-33.44414450478514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf80f32bae2d%3A0xa9d1ed0b6e1b4437!2sLos%20Jesuitas%20881%2C%207500000%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1713548615604!5m2!1ses!2scl"></iframe>
+                        </div>
                     </div>
                 </div>
             </section>
+
         </main>
     );
 }
