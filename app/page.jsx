@@ -11,17 +11,17 @@ import React from 'react';
 
 export default function Page() {
     return (
-        <main id="inicio" className="pt-12">
+        <main >
             
-            <section data-aos="fade-down" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
+            <section id="inicio" data-aos="fade" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat pt-12">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
                         <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
                         <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-medium leading-relaxed ">La empresa que impulsa tus ventas</h2>
-                        <p className=" mx-8 mb-16 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
+                        <p className=" mx-8 mb-8 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
                         <p className=" mx-8 ">
-                            <Link href="" className="py-2 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
-                            <Link href="" className="py-2 px-4 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
+                            <Link href="" className="py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
+                            <Link href="" className="py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
                         </p>
                     </div>
                 </div>
