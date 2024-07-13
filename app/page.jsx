@@ -6,12 +6,14 @@ import phone from 'public/images/phone.svg';
 import fondoVentas from 'public/images/fondo-ventas1.png';
 import quienesSomos from 'public/images/quienessomos.jpg';
 
+import React from 'react';
+
 
 export default function Page() {
     return (
         <main className="pt-12">
             
-            <section className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
+            <section id="inicio" data-aos="fade-down" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
                         <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
@@ -28,12 +30,12 @@ export default function Page() {
             <section className=" w-full">
 
                 <div className=" max-w-screen-lg m-auto flex flex-col sm:flex-col md:flex-row lg:flex-row ">
-                    <div className=" w-full sm:w-full md:w-5/12 lg:w-5/12 my-0 sm:my-0 md:my-4 lg:my-4">
+                    <div data-aos="zoom-in" className=" w-full sm:w-full md:w-5/12 lg:w-5/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <p className=" mx-0 sm:mx-0 md:mx-4 lg:mx-4 h-full ">
                             <Image className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos} alt="quiénes somos" />
                         </p>
                     </div>
-                    <div id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
+                    <div data-aos="fade-left" id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <div className=" mx-8 ">
                             <h3 className=" text-4xl font-medium text-center pt-20 pb-3">Quiénes Somos</h3>
                             <p className=" text-lg font-normal text-center pb-20 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
@@ -47,7 +49,7 @@ export default function Page() {
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center pb-3">Productos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center pb-8">Conoce nuestros productos.</p>
                 <div className=" max-w-screen-lg mx-auto pt-6 pr-4 pb-4 pl-4 grid grid-cols-1 grid-rows-3 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 gap-5">
-                    <div className=" flex flex-col h-full">
+                    <div data-aos="fade-down" className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 1.000 pymes/empresas</h4>
                             <p><Image className=" m-auto" src={fondoVentas} alt="ventas" /></p>
@@ -58,7 +60,7 @@ export default function Page() {
                             <p className=" mt-6"><Link className=" inline-block text-lg text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out" href="">Comprar plan 1</Link></p>
                         </div>
                     </div>
-                    <div className=" flex flex-col h-full">
+                    <div data-aos="fade-down" className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 2.000 pymes/empresas</h4>
                             <p><Image className=" m-auto" src={fondoVentas} alt="ventas" /></p>
@@ -69,7 +71,7 @@ export default function Page() {
                             <p className=" mt-6"><Link className=" inline-block text-lg text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out" href="">Comprar plan 2</Link></p>
                         </div>
                     </div>
-                    <div className=" flex flex-col h-full">
+                    <div data-aos="fade-down" className=" flex flex-col h-full">
                         <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                             <h4 className=" text-2xl text-black font-semibold mb-4">Base de datos 5.000 pymes/empresas</h4>
                             <p><Image className=" m-auto" src={fondoVentas} alt="ventas" /></p>
@@ -86,7 +88,7 @@ export default function Page() {
             <section id="contactanos" className=" pt-20 pb-10 ">
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center px-4 pb-3">Contáctanos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-normal text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
-                <div className=" max-w-screen-lg pt-6 px-4 mx-auto ">
+                <div data-aos="fade-down" className=" max-w-screen-lg pt-6 px-4 mx-auto ">
                     <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-xl border-black border-opacity-10">
                         <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
                             <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope"/> invchincol@gmail.com</p>
