@@ -11,9 +11,9 @@ import React from 'react';
 
 export default function Page() {
     return (
-        <main className="pt-12">
+        <main id="inicio" className="pt-12">
             
-            <section id="inicio" data-aos="fade-down" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
+            <section data-aos="fade-down" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className=" bg-black bg-opacity-40">
                     <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
                         <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
