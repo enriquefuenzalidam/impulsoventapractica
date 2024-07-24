@@ -77,7 +77,7 @@ export default function Page() {
                             <p><Image className=" m-auto" src={fondoVentas} alt="ventas" /></p>
                             <p className=" text-lg text-black font-normal ">Obtén una ventaja competitiva con nuestra extensa base de datos de 5.000 contactos de pymes y empresas. Con una abundancia de prospectos a tu alcance, podrás desarrollar estrategias de marketing más sólidas y llegar a una audiencia más amplia, facilitando el crecimiento y la expansión de tu negocio de manera significativa.</p>
                         </div>
-                        <div className="bg-[#F7F7F7] border-solid border-2 rounded-b-xl border-black border-opacity-10 p-6 text-center">
+                        <div className=" bg-[#F7F7F7] border-solid border-2 rounded-b-xl border-black border-opacity-10 p-6 text-center">
                             <p className=" text-3xl text-black font-medium ">$ 5.000 CLP</p>
                             <p className=" mt-6" ><Link className=" inline-block text-lg text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out" href="">Comprar plan 3</Link></p>
                         </div>
