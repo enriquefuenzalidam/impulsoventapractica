@@ -7,10 +7,10 @@ import hamburgerMenu from 'public/images/bars.svg';
 import { useState } from 'react';
 
 const navItems = [
-    { linkText: 'Inicio', href: '#inicio' },
-    { linkText: 'Quiénes Somos', href: '#quienessomos' },
-    { linkText: 'Productos', href: '#productos' },
-    { linkText: 'Contáctanos', href: '#contactanos'}
+    { linkText: 'Inicio', href: './#inicio' },
+    { linkText: 'Quiénes Somos', href: './#quienessomos' },
+    { linkText: 'Productos', href: './#productos' },
+    { linkText: 'Contáctanos', href: './#contactanos' }
 ];
 
 export function Header() {
@@ -28,10 +28,10 @@ export function Header() {
                 </div>
 
                 {!!navItems?.length && (
-                <ul className="hidden sm:hidden md:flex lg:flex justify-end w-8/12 text-right text-lg ">
+                <ul className="hidden sm:hidden md:flex lg:flex justify-end w-8/12 text-right text-xl ">
                     {navItems.map((item, index) => (
                         <li key={index} className=" inline-block text-right pl-6">
-                            <Link href={item.href} className="inline-block no-underline text-nowrap text-white text-opacity-70 hover:text-opacity-100" > {item.linkText} </Link>
+                            <Link href={item.href} className="inline-block no-underline text-nowrap text-white text-opacity-70 hover:text-opacity-100 font-condensed" > {item.linkText} </Link>
                         </li>
                     ))}
                 </ul>
@@ -40,12 +40,12 @@ export function Header() {
             </section>
 
             {!!navItems?.length && (
-            <ul className={`bg-[#0B0B5C] md:hidden lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            <ul className={`bg-[#0B0B5C] lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
                 isOpen ? 'max-h-screen opacity-100 py-5 px-6' : 'max-h-0 opacity-0'
             }`}>
                 {navItems.map((item, index) => (
                     <li key={index} className="py-2">
-                        <Link onClick={() => setIsOpen(!isOpen)} href={item.href} className="block no-underline text-white text-opacity-70 hover:text-opacity-100">
+                        <Link onClick={() => setIsOpen(!isOpen)} href={item.href} className="block no-underline text-white text-opacity-70 hover:text-opacity-100  font-condensed text-xl">
                             {item.linkText}
                         </Link>
                     </li>

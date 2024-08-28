@@ -44,11 +44,11 @@ const linksCols = [
 
 export function Footer() {
     return (
-        <footer data-aos="fade-up" className=" bg-[#0B0B5C]">
+        <footer data-aos="fade-up" data-aos-once="true" className=" bg-[#0B0B5C]">
             <section className=" max-w-screen-lg mx-auto">
               <div className="w-full pl-[25%] sm:pl-[20%] md:pl-[20%] lg:pl-[11%] pr-0 pt-10 pb-0">
                 {linksCols.map((linkCol, index) => (
-                <div data-aos="fade-right" key={index} className="w-full mx-auto sm:w-6/12 md:w-6/12 lg:w-3/12 pb-10 inline-flex flex-col items-start">
+                <div data-aos-once="true" data-aos="fade-right" key={index} className="w-full mx-auto sm:w-6/12 md:w-6/12 lg:w-3/12 pb-10 inline-flex flex-col items-start">
                     <h5 className="font-bold text-xl text-white pb-2 ">{linkCol.colTitle}</h5>
                     <ul>
                         {linkCol.linksList.map((link, linkIndex) => (

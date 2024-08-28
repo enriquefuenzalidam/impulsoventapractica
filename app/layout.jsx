@@ -5,6 +5,7 @@ import '../styles/globals.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import AOSInitializer from '../components/AOSInitializer';
+import { CartProvider } from './context/CartContext';
 
 
 
@@ -23,7 +24,9 @@ export default function RootLayout({ children }) {
             <body className="antialiased bg-white">
                 <AOSInitializer />
                 <Header />
+                <CartProvider>
                 {children}
+                </CartProvider>
                 <Footer />
             </body>
         </html>

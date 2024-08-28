@@ -12,7 +12,8 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Helvetica Neue', 'Arial', 'Roboto', 'Noto Sans', 'Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Helvetica Neue', 'Arial', 'Roboto', 'Noto Sans', 'Inter', ...defaultTheme.fontFamily.sans],
+                condensed: ['Reddit Sans Condensed', ...defaultTheme.fontFamily.sans]
             }
         }
     },
