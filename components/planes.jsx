@@ -11,26 +11,22 @@ import fondoVentas2 from 'public/images/fondo-ventas2.png';
 import planesJson from 'data/planes.json';
 
 const Planes = () => {
-    const compraBlock = useRef(null);
-    const compraContainer = useRef(null); // Ref for the container we want to expand/collapse
-
     const { items, addItem, removeItem, clearCart, isEmpty, cartTotal, hydrated } = useCartContext();
     const [formData, setFormData] = useState({ name: '', email: '', confirmEmail: '' });
     const [errors, setErrors] = useState({});
 
-    // Function to manage the height toggle
-    const toggleHeight = () => {
-        if (compraContainer.current) {
-            if (isEmpty) {
-                compraContainer.current.style.height = '0px';
-            } else {
-                compraContainer.current.style.height = `${compraBlock.current.scrollHeight}px`;
-            }
-        }
+    const compraBlock = useRef(null);
+    const [compraBlockHeight, setCompraBlockHeight] = useState(0);
+
+    const updateBlockHeight = () => {
+        if (compraBlock.current) setCompraBlockHeight(compraBlock.current.scrollHeight);
     };
 
     useEffect(() => {
-        toggleHeight(); // Call it on mount and whenever `isEmpty` changes
+        updateBlockHeight();
+        const handleResize = () => updateBlockHeight();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, [isEmpty]);
 
     if (!hydrated) { return null; }
@@ -54,7 +50,6 @@ const Planes = () => {
 
     return (
         <>
-
             {!!planesJson?.length && (
                 <div className=" max-w-screen-lg mx-auto py-6 px-4 grid grid-cols-1 grid-rows-3 sm:grid-cols-1 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 gap-5">
                     {planesJson.map((item, index) => (
@@ -68,7 +63,7 @@ const Planes = () => {
                                 <p className=" text-3xl text-black font-medium ">CLP $ {new Intl.NumberFormat('es-CL').format(item.planPrec)}</p>
                                 <p className=" mt-6">
                                     <Link
-                                        href='./#compra'
+                                        href="./#compra"
                                         onClick={() => addItem(item)}
                                         className=" inline-block text-lg text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out cursor-pointer" >
                                         Comprar plan {index + 1}</Link></p>
@@ -78,14 +73,15 @@ const Planes = () => {
                 </div>
             )}
 
+            <div id="compra" className={` block ${ !isEmpty && `h-24` } `}></div>
 
-            <div id="compra" ref={compraContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-500 overflow-hidden block `} style={{ height: `0px` }} >
+            <div className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: !isEmpty ? `${compraBlockHeight}px` : `0` }} >
                 <div ref={compraBlock} >
-                    <div className={`relative bg-[#F7F7F7]  border-solid border-black border-opacity-20 rounded-xl ${ !isEmpty ? 'grid grid-cols-1 md:grid-cols-2' : 'block'} border-4 `}>
+                    <div className={`relative bg-[#F7F7F7]  border-solid border-black border-opacity-20 rounded-xl transition-all ease-in-out duration-700 ${ !isEmpty ? 'grid grid-cols-1 md:grid-cols-2 opacity-100' : 'block opacity-0'} border-4 `}>
 
                         <div className={` relative mx-auto m-6 text-center flex items-center justify-center `}>
                             <div className={` align-middle overflow-hidden relative block px-8  font-medium text-black text-lg lg:text-xl `} >
-                                <p className={` block mb-5 `}><img className={`object-center object-contain w-auto h-56 inline opacity-100 `} src={fondoVentas2.src} width="28" height="auto" alt="" /></p>
+                                <p className={` block ${!isEmpty ? `mb-5`:`py-24` } `}><img className={`object-center object-contain w-auto h-56 inline opacity-100 `} src={fondoVentas2.src} width="28" height="auto" alt="" /></p>
                                 {!isEmpty && (<>
                                     <p className={` block text-lg opacity-55 uppercase mb-2`}>Usted está comprando el plan</p>
                                     <p className={` block text-3xl font-bold mb-2 `}>{items[0]?.planNombr}</p>
