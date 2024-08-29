@@ -16,10 +16,16 @@ const Planes = () => {
     const [errors, setErrors] = useState({});
 
     const compraBlock = useRef(null);
+    const compraBlockContainer = useRef(null);
     const [compraBlockHeight, setCompraBlockHeight] = useState(0);
 
     const updateBlockHeight = () => {
-        if (compraBlock.current) setCompraBlockHeight(compraBlock.current.scrollHeight);
+        if (compraBlock.current && compraBlockContainer.current) {
+            const blockHeight = compraBlock.current.scrollHeight;
+            setCompraBlockHeight(blockHeight);
+            const comprasBlock = compraBlockContainer.current;
+            comprasBlock.style.height = !isEmpty ? `${blockHeight}px` : `0px`;
+        }
     };
 
     useEffect(() => {
@@ -28,6 +34,26 @@ const Planes = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [isEmpty]);
+
+    const blockOpenning = () => {
+        const comprasBlock = compraBlockContainer.current;
+        const getCompraBlockHeight = compraBlock.current.scrollHeight;
+        comprasBlock.style.height = `0`;
+        requestAnimationFrame(() => {
+            comprasBlock.style.transition = 'height 0.618s ease-in-out';
+            comprasBlock.style.height = `${getCompraBlockHeight + 96}px`;
+        });
+    };
+
+    const blockClosing = () => {
+        const comprasBlock = compraBlockContainer.current;
+        const getCompraBlockHeight = compraBlock.current.scrollHeight;
+        comprasBlock.style.height = `${getCompraBlockHeight + 96}px`;
+        requestAnimationFrame(() => {
+            comprasBlock.style.transition = 'height 0.618s ease-in-out';
+            comprasBlock.style.height = `0`;
+        });
+    };
 
     if (!hydrated) { return null; }
 
@@ -62,11 +88,10 @@ const Planes = () => {
                             <div className="bg-[#F7F7F7] border-solid border-2 border-black border-opacity-10 rounded-b-xl p-6 text-center">
                                 <p className=" text-3xl text-black font-medium ">CLP $ {new Intl.NumberFormat('es-CL').format(item.planPrec)}</p>
                                 <p className=" mt-6">
-                                    <Link
-                                        href="./#compra"
-                                        onClick={() => addItem(item)}
+                                    <span
+                                        onClick={() => { addItem(item); blockOpenning(); document.getElementById('compra').scrollIntoView({ behavior: 'smooth' }); }}
                                         className=" inline-block text-lg text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out cursor-pointer" >
-                                        Comprar plan {index + 1}</Link></p>
+                                        Comprar plan {index + 1}</span></p>
                             </div>
                         </div>
                     ))}
@@ -75,9 +100,9 @@ const Planes = () => {
 
             <div id="compra" className={` block ${ !isEmpty && `h-24` } `}></div>
 
-            <div className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: !isEmpty ? `${compraBlockHeight}px` : `0` }} >
+            <div ref={compraBlockContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `}  >
                 <div ref={compraBlock} >
-                    <div className={`relative bg-[#F7F7F7]  border-solid border-black border-opacity-20 rounded-xl transition-all ease-in-out duration-700 ${ !isEmpty ? 'grid grid-cols-1 md:grid-cols-2 opacity-100' : 'block opacity-0'} border-4 `}>
+                    <div className={`relative bg-[#F7F7F7]  border-solid border-black border-opacity-20 rounded-xl transition-all ease-in-out duration-700 ${ !isEmpty ? 'grid grid-cols-1 md:grid-cols-2' : 'block' } border-4 `}>
 
                         <div className={` relative mx-auto m-6 text-center flex items-center justify-center `}>
                             <div className={` align-middle overflow-hidden relative block px-8  font-medium text-black text-lg lg:text-xl `} >
@@ -86,7 +111,7 @@ const Planes = () => {
                                     <p className={` block text-lg opacity-55 uppercase mb-2`}>Usted está comprando el plan</p>
                                     <p className={` block text-3xl font-bold mb-2 `}>{items[0]?.planNombr}</p>
                                     <p className={` block italic font-light text-3xl mb-6 `}>CLP $ {new Intl.NumberFormat('es-CL').format(cartTotal)}</p>
-                                    <p className={` block mb-4 `}><Link href='./#productos' className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={clearCart}>Anular compra</Link></p>
+                                    <p className={` block mb-4 `}><span className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#0d6efd] hover:bg-[#0a58ca] no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={(e) => { e.preventDefault(); clearCart(); blockClosing(); }}>Anular compra</span></p>
                                 </>)}
                             </div>
                         </div>

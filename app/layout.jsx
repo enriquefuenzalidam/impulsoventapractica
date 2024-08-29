@@ -1,6 +1,4 @@
 
-
-
 import '../styles/globals.css';
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
@@ -9,15 +7,10 @@ import { CartProvider } from './context/CartContext';
 
 
 
-export const metadata = {
-    title: {
-      default: 'Impulso Ventas',
-    },
-  };
-  
 export default function RootLayout({ children }) {
+
     return (
-        <html lang="en" data-theme="lofi"  className="scroll-smooth">
+        <html lang="en" data-theme="lofi" >
             <head>
                 <link rel="icon" href="/images/logo-dba.ico" sizes="any" />
             </head>
