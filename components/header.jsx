@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import impulsoVentasLogo from 'public/images/logo-dba.ico';
@@ -7,11 +8,48 @@ import hamburgerMenu from 'public/images/bars.svg';
 import { useState } from 'react';
 
 const navItems = [
-    { linkText: 'Inicio', href: './#inicio' },
-    { linkText: 'Quiénes Somos', href: './#quienessomos' },
-    { linkText: 'Productos', href: './#productos' },
-    { linkText: 'Contáctanos', href: './#contactanos' }
+    { linkText: 'Inicio', href: './#inicio', elementId: 'inicio' },
+    { linkText: 'Quiénes Somos', href: './#quienessomos', elementId: 'quienessomos' },
+    { linkText: 'Productos', href: './#productos', elementId: 'productos' },
+    { linkText: 'Contáctanos', href: './#contactanos', elementId: 'contactanos' }
 ];
+
+
+
+const smoothScrollTo = (element, duration) => {
+    const startPosition = window.scrollY;
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    const animation = (currentTime) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = linearEase(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    const ease = (t, b, c, d) => {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const linearEase = (t, b, c, d) => {
+        return c * t / d + b;
+    };
+
+    requestAnimationFrame(animation);
+};
+
+const handleScroll = (elementId) => {
+    const targetElement = document.getElementById(elementId);
+    if (targetElement) smoothScrollTo(targetElement, 618); 
+};
+
+
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +69,7 @@ export function Header() {
                 <ul className="hidden sm:hidden md:flex lg:flex justify-end w-8/12 text-right text-xl ">
                     {navItems.map((item, index) => (
                         <li key={index} className=" inline-block text-right pl-6">
-                            <Link href={item.href} className="inline-block no-underline text-nowrap text-white text-opacity-70 hover:text-opacity-100 font-condensed" > {item.linkText} </Link>
+                            <span onClick={() => handleScroll(item.elementId)} className="cursor-pointer inline-block no-underline text-nowrap text-white text-opacity-70 hover:text-opacity-100 font-condensed" > {item.linkText} </span>
                         </li>
                     ))}
                 </ul>
@@ -45,9 +83,9 @@ export function Header() {
             }`}>
                 {navItems.map((item, index) => (
                     <li key={index} className="py-2">
-                        <Link onClick={() => setIsOpen(!isOpen)} href={item.href} className="block no-underline text-white text-opacity-70 hover:text-opacity-100  font-condensed text-xl">
+                        <span onClick={() => { setIsOpen(!isOpen); handleScroll(item.elementId); }} className="cursor-pointer block no-underline text-white text-opacity-70 hover:text-opacity-100  font-condensed text-xl">
                             {item.linkText}
-                        </Link>
+                        </span>
                     </li>
                 ))}
             </ul>

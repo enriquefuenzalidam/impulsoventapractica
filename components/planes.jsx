@@ -4,11 +4,44 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { useCartContext } from '../app/context/CartContext';
 
-import Link from 'next/link';
-import Image from 'next/image';
 import fondoVentas from 'public/images/fondo-ventas1.png';
 import fondoVentas2 from 'public/images/fondo-ventas2.png';
 import planesJson from 'data/planes.json';
+
+const smoothScrollTo = (element, duration) => {
+    const startPosition = window.scrollY;
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    const animation = (currentTime) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = linearEase(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    const ease = (t, b, c, d) => {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const linearEase = (t, b, c, d) => {
+        return c * t / d + b;
+    };
+
+    requestAnimationFrame(animation);
+};
+
+const handleScroll = (elementId) => {
+    const targetElement = document.getElementById(elementId);
+    if (targetElement) smoothScrollTo(targetElement, 618); 
+};
+
+
 
 const Planes = () => {
     const { items, addItem, removeItem, clearCart, isEmpty, cartTotal, hydrated } = useCartContext();
@@ -102,7 +135,7 @@ const Planes = () => {
 
                                 ) : (
                                     <span
-                                        onClick={() => { addItem(item); document.getElementById('compra').scrollIntoView({ behavior: 'smooth' }); blockOpenning(); }}
+                                        onClick={() => { addItem(item); handleScroll('compra'); blockOpenning(); }}
                                         className={` text-lg text-white font-medium py-2 px-4 rounded-md bg-[#094fb8] hover:bg-[#0d6efd] shadow-none hover:shadow-md hover:shadow-black cursor-pointer inline-block no-underline transition-all duration-300 ease-out `} >
                                         Comprar plan {index + 1}</span>
                                     
@@ -113,7 +146,7 @@ const Planes = () => {
                 </div>
             )}
 
-            <div id="compra" className={` block transition-all ease-in-out h-20 `} />
+            <div id="compra" className={` block h-20 `} />
 
             <div ref={compraBlockContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: `0` }} >
                 <div ref={compraBlock} >

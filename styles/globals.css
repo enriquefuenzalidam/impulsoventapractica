@@ -6,14 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* This assumes you want to apply this globally */
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     --scroll-behavior-duration: 3s; /* This can be dynamically set in JS */
   }
-  
-  /* Example of how to use this property in a class (optional) */
-  .custom-scroll {
+
+.custom-scroll {
     scroll-behavior: var(--scroll-behavior-duration, smooth);
-  }
+}
