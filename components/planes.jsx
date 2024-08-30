@@ -151,7 +151,7 @@ const Planes = () => {
             <div ref={compraBlockContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: `0` }} >
                 <div ref={compraBlock} >
 
-                    <div className={` shadow-lg shadow-[rgba(0,0,0,0.4)] relative bg-[#F7F7F7]  rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 `}>
+                    <div className={` shadow-lg shadow-[rgba(0,0,0,0.4)] relative bg-[#F7F7F7] border-2 border-solid border-black border-opacity-10 rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 `}>
                         <div className={` min-h-[28rem] w-full relative mx-auto flex items-center justify-center `}>
                             <div className={` bg-[url('/images/fondo-ventas2.png')] bg-bottom bg-no-repeat absolute inset-0 w-full h-full cover opacity-20`} />
 
