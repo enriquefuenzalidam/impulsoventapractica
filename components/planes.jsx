@@ -27,7 +27,7 @@ const Planes = () => {
             const blockHeight = compraBlock.current.scrollHeight;
             setCompraBlockHeight(blockHeight);
             const comprasBlock = compraBlockContainer.current;
-            comprasBlock.style.height = !isEmpty ? `${blockHeight + 24}px` : `0px`;
+            comprasBlock.style.height = !isEmpty ? `${blockHeight + 80}px` : `0px`;
         }
     }, [isEmpty]);
 
@@ -44,14 +44,14 @@ const Planes = () => {
         const comprasBlock = compraBlockContainer.current;
         requestAnimationFrame(() => {
             comprasBlock.style.transition = 'height 594ms ease-in-out';
-            comprasBlock.style.height = `${blockHeight + 24}px`;
+            comprasBlock.style.height = `${blockHeight + 80}px`;
         });
     };
 
     const blockClosing = () => {
         const blockHeight = compraBlock.current.scrollHeight;
         const comprasBlock = compraBlockContainer.current;
-        comprasBlock.style.height = `${blockHeight + 24}px`;
+        comprasBlock.style.height = `${blockHeight + 80}px`;
         requestAnimationFrame(() => {
             comprasBlock.style.transition = 'height 594ms ease-in-out';
             comprasBlock.style.height = `0`;
@@ -113,11 +113,11 @@ const Planes = () => {
                 </div>
             )}
 
-            <div id="compra" className={` block transition-all ease-in-out duration-[594ms] ${!isEmpty ? 'h-20': 'h-6' } `} />
+            <div id="compra" className={` block transition-all ease-in-out h-20 `} />
 
             <div ref={compraBlockContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: `0` }} >
-
                 <div ref={compraBlock} >
+
                     <div className={`relative bg-[#F7F7F7] border-solid border-black border-opacity-20 rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 border-4 `}>
                         <div className={` min-h-[28rem] relative mx-auto text-center flex items-center justify-center `}>
                             <div className={` align-middle overflow-hidden relative block p-2 md:p-8 font-medium text-black text-lg lg:text-xl `} >
@@ -145,6 +145,7 @@ const Planes = () => {
                                 <input className={`block w-full text-xl text-white font-bold py-4 px-6 rounded-md bg-[#094fb8] hover:bg-[#0d6efd] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} type='button' Value='Pagar aquí' onClick={handlePayment} />
                             </p>
                         </form>
+
                     </div>
                 </div>
 

@@ -11,10 +11,13 @@ export default function Page() {
     return (
         <main className={`  font-condensed `}>
             
-            <section id="inicio" data-aos-once="true"  data-aos="fade" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat pt-12 ">
-                <div className=" bg-black bg-opacity-40 h-[calc(100vh-3rem)] flex flex-col items-center justify-center">
-                    <div className=" max-w-screen-lg mx-auto">
-                        <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg border-2 border-solid border-[#b02a37] bg-transparent text-[#b02a37] inline-block uppercase font-medium text-xl">Bases de datos</h3>
+            <section id="inicio" data-aos-once="true"  data-aos="fade" className="relative pt-12 h-[calc(100vh)] ">
+                <div className="absolute top-[3rem] lef-0 bg-black bg-opacity-40 h-[calc(100%-3rem)] w-full bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat" />
+                <div className="absolute top-[3rem] lef-0 bg-black bg-opacity-40 h-[calc(100%-3rem)] w-full" />
+                <div className=" relative max-w-screen-lg mx-auto h-[calc(100%-3rem)] flex flex-col justify-center items-left ">
+                        <div>
+                            <h3 className=" inline-block mx-8 mb-8 py-3 px-5 rounded-lg border-4 border-solid border-[#c92859] bg-transparent text-[#d02550] uppercase font-extrabold text-xl">Bases de datos</h3>
+                        </div>
                         <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que impulsa tus ventas</h2>
                         <p className=" mx-8 mb-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-condensed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
                         <p className=" mx-8 ">
@@ -22,7 +25,6 @@ export default function Page() {
                             <Link href="./#contactanos" className="py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
                         </p>
                     </div>
-                </div>
             </section>
 
             <section className=" w-full">
