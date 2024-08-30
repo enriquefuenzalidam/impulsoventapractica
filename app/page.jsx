@@ -33,10 +33,17 @@ export default function Page() {
 
             </section>
 
-            <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 ">
+            <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 relative ">
+            <div className={` absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-transparent `} />
+            <div className={` absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-transparent `} />
+
                 <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center pb-3">Productos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-medium text-center pb-8">Conoce nuestros productos.</p>
                 <Planes />
+
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.03)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-5 bg-gradient-to-b to-[rgba(0,0,0,0.1)] from-transparent `} />
+
             </section>
 
             <section id="contactanos" className=" pt-20 pb-10 ">
