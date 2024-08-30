@@ -1,11 +1,9 @@
 'use client'
 
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import impulsoVentasLogo from 'public/images/logo-dba.ico';
 import hamburgerMenu from 'public/images/bars.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const navItems = [
     { linkText: 'Inicio', href: './#inicio', elementId: 'inicio' },
@@ -54,14 +52,32 @@ const handleScroll = (elementId) => {
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
+    useEffect(() => {
+        const navShowOnScroll = () => {
+          const navbar = document.getElementById('navbar');
+          navbar.classList.remove('hidden');
+          const theHeight = window.innerHeight * 0.618;
+          if (window.scrollY >= theHeight) {
+            navbar.classList.remove('-translate-y-full','opacity-0');
+            navbar.classList.add('translate-y-0','opacity-100');
+          } else {
+            navbar.classList.remove('translate-y-0', 'opacity-100');
+            navbar.classList.add('-translate-y-full', 'opacity-0');
+          }
+        };
+    
+        window.addEventListener('scroll', navShowOnScroll);
+        return () => window.removeEventListener('scroll', navShowOnScroll);
+      }, []);
+    
     return (
-        <nav data-aos="fade-down" className="bg-[#0B0B5C] fixed top-0 left-0 w-full z-50">
+        <nav id="navbar" className=" hidden opacity-0 bg-[#0B0B5C] fixed top-0 left-0 w-full z-50 bg-opacity-90 transition-all -translate-y-full ease-in-out duration-[618ms]">
             <section className="max-w-screen-lg mx-auto py-3 px-6 text-white flex items-center">
                 <div className="w-full sm:w-full md:w-4/12 lg:w-4/12 flex flex-row items-center">
-                    <p className="inline-block w-2/12 sm:w-2/12 md:w-auto lg:w-auto "><Image className=" inline-block h-8 w-auto" src={impulsoVentasLogo} alt="Impulso Ventas Logo" /></p>
-                    <p className="inline-block w-8/12 sm:w-8/12 md:w-auto lg:w-auto text-center sm:text-center md:text-left lg:text-left ml-2"><Link className="inline-block sm:inline-block md:inline-block lg:inline-block font-light tracking-widest no-underline ml-1 text-2xl text-white text-opacity-80 capitalize" href="/">I<em>mpulso</em> V<em>entas</em></Link></p>
+                    <p className="inline-block w-2/12 sm:w-2/12 md:w-auto lg:w-auto "><img className=" inline-block h-8 w-auto" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" /></p>
+                    <p className="inline-block w-8/12 sm:w-8/12 md:w-auto lg:w-auto text-center sm:text-center md:text-left lg:text-left ml-2"><span className="inline-block sm:inline-block md:inline-block lg:inline-block font-light tracking-wide no-underline ml-1 text-2xl text-white text-opacity-80 capitalize cursor-pointer font-Roboto" onClick={() => handleScroll('inicio')}>I<em>mpulso</em> V<em>entas</em></span></p>
                     <div className="w-2/12 sm:w-2/12 md:w-auto lg:w-auto inline-block sm:inline-block md:hidden lg:hidden text-right">
-                        <p className="inline-block cursor-pointer" onClick={() => setIsOpen(!isOpen)}><Image className=" inline-block h-8 w-auto" src={hamburgerMenu} alt="Menu" /></p>
+                        <p className="inline-block cursor-pointer" onClick={() => setIsOpen(!isOpen)}><img className=" inline-block h-8 w-auto" src={hamburgerMenu.src} alt="Menu" /></p>
                     </div>
                 </div>
 

@@ -12,7 +12,10 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Helvetica Neue', 'Arial', 'Roboto', 'Noto Sans', 'Inter', ...defaultTheme.fontFamily.sans],
+                sans: ['Helvetica Neue', 'Arial', ...defaultTheme.fontFamily.sans],
+                Roboto: ['Roboto', 'Helvetica Neue', 'Arial', ...defaultTheme.fontFamily.sans],
+                NotoSans: ['Noto Sans', 'Helvetica Neue', 'Arial', ...defaultTheme.fontFamily.sans],
+                Inter: ['Inter', 'Helvetica Neue', 'Arial', ...defaultTheme.fontFamily.sans],
                 condensed: ['Reddit Sans Condensed', ...defaultTheme.fontFamily.sans]
             }
         }
