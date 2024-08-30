@@ -1,43 +1,26 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
+
 import envelope from 'public/images/envelope.svg';
 import locationDot from 'public/images/location-dot.svg';
 import phone from 'public/images/phone.svg';
 import quienesSomos from 'public/images/quienessomos.jpg';
+
 import Planes from 'components/planes';
-import impulsoVentasLogo from 'public/images/logo-dba.ico';
+import Cover from 'components/cover';
 
 export default function Page() {
     return (
         <main className={`  font-condensed bg-white`}>
 
-            <section id="inicio" data-aos-once="true" data-aos="fade" className="relative min-h-[calc(100vh)] bg-[#0B0B5C] ">
-                <div className="absolute top-0 lef-0 bg-black bg-opacity-40 h-full w-full bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat" />
-                <div className="absolute top-0 lef-0 bg-black bg-opacity-40 h-full w-full" />
-                <div className=" relative max-w-screen-lg mx-auto min-h-[calc(100vh)] h-full w-full flex flex-col justify-center items-left ">
-                    <div>
-                        <h3 className=" inline-block m-8 py-2 px-4 rounded-lg border-4 border-solid border-[#c92859] bg-transparent text-[#d02550] uppercase font-extrabold text-lg">Bases de datos</h3>
-                    </div>
-                    <div className={` mx-8 mb-8 `}>
-                        <img className=" inline-block w-10 sm:w-12 md:w-16 h-auto align-bottom" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" />
-                        <span className="inline-block text-3xl sm:text-4xl md:text-6xl font-normal md:font-extralight tracking-tight no-underline ml-2 text-white text-opacity-60 md:text-opacity-100 capitalize font-Roboto">I<em>mpulso</em> V<em>entas</em></span>
-                    </div>
-                    <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que <span className={` whitespace-nowrap `}>impulsa tus ventas</span></h2>
-                    <p className=" mx-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-condensed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
-                    <p className=" mx-8 mb-8 ">
-                        <Link href="./#productos" className="py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
-                        <Link href="./#contactanos" className="py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
-                    </p>
-                </div>
-            </section>
+            <Cover />
 
             <section className=" w-full">
 
                 <div className=" max-w-screen-lg m-auto flex flex-col-reverse sm:flex-col-reverse md:flex-row lg:flex-row ">
                     <div data-aos-once="true" data-aos="zoom-in" className=" w-full sm:w-full md:w-5/12 lg:w-5/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <p className=" mx-0 sm:mx-0 md:mx-4 lg:mx-4 h-full ">
-                            <Image className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos} alt="quiénes somos" />
+                            <img className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos.src} alt="quiénes somos" />
                         </p>
                     </div>
                     <div data-aos-once="true" data-aos="fade-left" id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
