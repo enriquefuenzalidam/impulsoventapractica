@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" data-theme="lofi" >
             <head>
+                <title>Impulso Ventas</title>
                 <link rel="icon" href="/images/logo-dba.ico" sizes="any" />
             </head>
             <body className="antialiased bg-white">

@@ -9,17 +9,17 @@ import Planes from 'components/planes';
 
 export default function Page() {
     return (
-        <main >
+        <main className={`  font-condensed `}>
             
-            <section id="inicio" data-aos-once="true"  data-aos="fade" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat pt-12">
-                <div className=" bg-black bg-opacity-40">
-                    <div className=" max-w-screen-lg mx-auto lg:py-40 md:py-28 sm:py-16 py-16">
-                        <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg bg-[#b02a37] text-white inline-block uppercase font-medium text-xl">Bases de datos</h3>
-                        <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-medium leading-relaxed ">La empresa que impulsa tus ventas</h2>
-                        <p className=" mx-8 mb-8 text-white text-opacity-80 text-xl font-medium leading-relaxed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
+            <section id="inicio" data-aos-once="true"  data-aos="fade" className="bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat pt-12 ">
+                <div className=" bg-black bg-opacity-40 h-[calc(100vh-3rem)] flex flex-col items-center justify-center">
+                    <div className=" max-w-screen-lg mx-auto">
+                        <h3 className=" mx-8 mb-8 py-3 px-5 rounded-lg border-2 border-solid border-[#b02a37] bg-transparent text-[#b02a37] inline-block uppercase font-medium text-xl">Bases de datos</h3>
+                        <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que impulsa tus ventas</h2>
+                        <p className=" mx-8 mb-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-condensed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
                         <p className=" mx-8 ">
-                            <Link href="" className="py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
-                            <Link href="" className="py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
+                            <Link href="./#productos" className="py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
+                            <Link href="./#contactanos" className="py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</Link>
                         </p>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ export default function Page() {
 
             <section className=" w-full">
 
-                <div className=" max-w-screen-lg m-auto flex flex-col sm:flex-col md:flex-row lg:flex-row ">
+                <div className=" max-w-screen-lg m-auto flex flex-col-reverse sm:flex-col-reverse md:flex-row lg:flex-row ">
                     <div data-aos-once="true"  data-aos="zoom-in" className=" w-full sm:w-full md:w-5/12 lg:w-5/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <p className=" mx-0 sm:mx-0 md:mx-4 lg:mx-4 h-full ">
                             <Image className=" w-full h-full object-cover rounded-none sm:rounded-none md:rounded-xl lg:rounded-xl " src={quienesSomos} alt="quiénes somos" />
@@ -35,23 +35,23 @@ export default function Page() {
                     </div>
                     <div data-aos-once="true"  data-aos="fade-left" id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <div className=" mx-8 ">
-                            <h3 className=" text-4xl font-medium text-center pt-20 pb-3">Quiénes Somos</h3>
-                            <p className=" text-lg font-normal text-center pb-20 ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
+                            <h3 className=" text-4xl font-bold text-center pt-20 pb-3">Quiénes Somos</h3>
+                            <p className=" text-lg font-medium pb-20 text-left indent-5 hyphens-auto ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
                         </div>
                     </div>
                 </div>
 
             </section>
 
-            <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 pb-8">
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center pb-3">Productos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-normal text-center pb-8">Conoce nuestros productos.</p>
+            <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 ">
+                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center pb-3">Productos</h3>
+                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center pb-8">Conoce nuestros productos.</p>
                 <Planes/>
             </section>
 
             <section id="contactanos" className=" pt-20 pb-10 ">
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-medium text-center px-4 pb-3">Contáctanos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-normal text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
+                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3">Contáctanos</h3>
+                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
                 <div data-aos-once="true"  data-aos="fade-down" className=" max-w-screen-lg pt-6 px-4 mx-auto ">
                     <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-xl border-black border-opacity-10">
                         <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
