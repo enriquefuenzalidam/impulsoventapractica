@@ -160,7 +160,7 @@ const Planes = () => {
                                 <p className={` block text-lg opacity-55 uppercase mb-2`}>Usted está comprando el plan</p>
                                 <p className={` block text-3xl font-black mb-2 `}>{items[0]?.planNombr}</p>
                                 <p className={` block italic font-light text-3xl mb-6 `}>CLP $ {new Intl.NumberFormat('es-CL').format(cartTotal)}</p>
-                                <p className={` block `}><span className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#70232b] hover:bg-[#b02a37] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={(e) => { e.preventDefault(); clearCart(); blockClosing(); clearForm(); }} >Anular compra</span></p></>)}
+                                <p className={` block `}><span className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#70232b] hover:bg-[#b02a37] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={(e) => { e.preventDefault(); clearCart(); blockClosing(); clearForm(); }} >Anular</span></p></>)}
                             </div>
                         </div>
 
