@@ -5,7 +5,7 @@ import { useRef, useEffect, useState, useCallback } from 'react';
 import { useCartContext } from '../app/context/CartContext';
 
 import fondoVentas from 'public/images/fondo-ventas1.png';
-import fondoVentas2 from 'public/images/fondo-ventas2.png';
+import webpayplus from 'public/images/logo_webpay.svg';
 import planesJson from 'data/planes.json';
 
 const smoothScrollTo = (element, duration) => {
@@ -151,21 +151,23 @@ const Planes = () => {
             <div ref={compraBlockContainer} className={` max-w-screen-lg mx-auto px-4 transition-all ease-in-out duration-700 overflow-hidden block `} style={{ height: `0` }} >
                 <div ref={compraBlock} >
 
-                    <div className={`relative bg-[#F7F7F7] border-solid border-black border-opacity-20 rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 border-4 `}>
-                        <div className={` min-h-[28rem] relative mx-auto text-center flex items-center justify-center `}>
-                            <div className={` align-middle overflow-hidden relative block p-2 md:p-8 font-medium text-black text-lg lg:text-xl `} >
-                                <p className={` block mb-5 `}>
-                                    <img className={`object-center object-contain w-auto h-28 inline opacity-100 `} src={fondoVentas2.src} width="28" height="auto" alt="" /></p>
-                                {!isEmpty && (<>
-                                <p className={` block text-lg opacity-55 uppercase mb-2`}>Usted está comprando el plan</p>
+                    <div className={`relative bg-[#F7F7F7] border-8 border-solid border-black border-opacity-10 rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 `}>
+                        <div className={` min-h-[28rem] w-full relative mx-auto flex items-center justify-center `}>
+                            <div className={` bg-[url('/images/fondo-ventas2.png')] bg-bottom bg-no-repeat absolute inset-0 w-full h-full cover opacity-20`} />
+
+                            { !isEmpty && (<div className={` relative px-2 md:px-8 font-medium text-black text-lg lg:text-xl text-center flex flex-col `} >
+                            
+                                <p className={` block text-lg uppercase mb-2`}>Usted está comprando el plan</p>
                                 <p className={` block text-3xl font-black mb-2 `}>{items[0]?.planNombr}</p>
                                 <p className={` block italic font-light text-3xl mb-6 `}>CLP $ {new Intl.NumberFormat('es-CL').format(cartTotal)}</p>
-                                <p className={` block `}><span className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#70232b] hover:bg-[#b02a37] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={(e) => { e.preventDefault(); clearCart(); blockClosing(); clearForm(); }} >Anular</span></p></>)}
-                            </div>
+                                <p className={` block `}><span className={`inline-block w-auto text-sm text-white font-medium py-2 px-4 rounded-md bg-[#70232b] hover:bg-[#b02a37] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} onClick={(e) => { e.preventDefault(); clearCart(); blockClosing(); clearForm(); }} >Anular</span></p>
+                                
+                            </div>) }
                         </div>
 
-                        <form className={` min-h-[28rem] mr-3 sm:mr-4 md:mr-5 lg:mr-6 ml-3 sm:ml-4 md:ml-0 lg:ml-0 flex flex-col items-center justify-center `} >
-                            <p className={` block w-full overflow-hidden align-middle relative font-normal font-condensed bg-white border-solid border-2 border-black border-opacity-10 rounded-xl `}>
+                        <form className={` min-h-[28rem] mr-3 sm:mr-4 md:mr-5 lg:mr-6 ml-3 sm:ml-4 md:ml-0 lg:ml-0 flex flex-col items-center justify-center py-4`} >
+                            <img src={webpayplus.src} alt='' width='178' className={` mb-6 `} />
+                            <p className={` block w-full relative font-normal font-condensed bg-white border-solid border-2 border-black border-opacity-10 rounded-xl `}>
                                 <input className={` block w-full p-2 bg-transparent text-2xl text-left `} type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Nombre' /></p>
                             {errors.name && (<p data-aos-once="true" data-aos="fade" className={` block w-full px-2 mt-1 ml-0 md:ml-6 text-red-500 text-md lg:text-lg text-left `}>{errors.name}</p>)}
                             <p className={` block w-full mt-6 overflow-hidden align-middle relative font-normal font-condensed bg-white border-solid border-2 border-black border-opacity-10 rounded-xl `}>
@@ -175,7 +177,7 @@ const Planes = () => {
                                 <input className={` block w-full p-2 bg-transparent text-2xl text-left `} type='email' name='confirmEmail' value={formData.confirmEmail} onChange={handleInputChange} placeholder='Confirme correo electrónico' /></p>
                             {errors.confirmEmail && (<p data-aos-once="true" data-aos="fade" className={` block w-full px-2 mt-1 ml-0 md:ml-6 text-red-500 text-md lg:text-lg text-left `}>{errors.confirmEmail}</p>)}
                             <p className={` block mt-6 `} >
-                                <input className={`block w-full text-xl text-white font-bold py-4 px-6 rounded-md bg-[#094fb8] hover:bg-[#0d6efd] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} type='button' Value='Pagar aquí' onClick={handlePayment} />
+                                <input className={`block w-full text-xl text-white font-bold py-2 px-16 rounded-md bg-[#094fb8] hover:bg-[#0d6efd] shadow-none hover:shadow-md hover:shadow-black no-underline transition-all duration-300 ease-out cursor-pointer `} type='button' Value='Ir a pagar' onClick={handlePayment} />
                             </p>
                         </form>
 

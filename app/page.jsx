@@ -16,15 +16,14 @@ export default function Page() {
                 <div className="absolute top-0 lef-0 bg-black bg-opacity-40 h-full w-full bg-[url('/images/img-principal2.jpg')] bg-cover bg-center bg-no-repeat" />
                 <div className="absolute top-0 lef-0 bg-black bg-opacity-40 h-full w-full" />
                 <div className=" relative max-w-screen-lg mx-auto min-h-[calc(100vh)] h-full w-full flex flex-col justify-center items-left ">
-                <div>
-                    <h3 class=" inline-block m-8 py-2 px-4 rounded-lg border-4 border-solid border-[#c92859] bg-transparent text-[#d02550] uppercase font-extrabold text-lg">Bases de datos</h3>
-                    
+                    <div>
+                        <h3 className=" inline-block m-8 py-2 px-4 rounded-lg border-4 border-solid border-[#c92859] bg-transparent text-[#d02550] uppercase font-extrabold text-lg">Bases de datos</h3>
                     </div>
                     <div className={` mx-8 mb-8 `}>
                         <img className=" inline-block w-10 sm:w-12 md:w-16 h-auto align-bottom" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" />
-                        <span className="inline-block text-3xl sm:text-4xl md:text-6xl sm:inline-block md:inline-block lg:inline-block font-extralight tracking-tight no-underline ml-2 text-white text-opacity-80 capitalize font-Roboto">I<em>mpulso</em> V<em>entas</em></span>
+                        <span className="inline-block text-3xl sm:text-4xl md:text-6xl font-normal md:font-extralight tracking-tight no-underline ml-2 text-white text-opacity-60 md:text-opacity-100 capitalize font-Roboto">I<em>mpulso</em> V<em>entas</em></span>
                     </div>
-                    <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que impulsa tus ventas</h2>
+                    <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que <span className={` whitespace-nowrap `}>impulsa tus ventas</span></h2>
                     <p className=" mx-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-condensed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
                     <p className=" mx-8 mb-8 ">
                         <Link href="./#productos" className="py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</Link>
