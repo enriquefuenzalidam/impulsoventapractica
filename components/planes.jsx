@@ -122,7 +122,7 @@ const Planes = () => {
                             <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
                                 <h4 className=" text-3xl text-black font-bold mb-4">{item.planNombr}</h4>
                                 <p><img className=" m-auto" src={fondoVentas.src} alt="ventas" /></p>
-                                <p className=" text-lg text-black font-medium text-left hyphens-auto indent-5 ">{item.planDescr}</p>
+                                <p className=" text-lg text-black font-medium text-left hyphens-auto indent-5 opacity-80">{item.planDescr}</p>
                             </div>
                             <div className="bg-[#F7F7F7] border-solid border-2 border-black border-opacity-10 rounded-b-xl p-6 text-center">
                                 <p className=" text-3xl text-black font-bold ">CLP $ {new Intl.NumberFormat('es-CL').format(item.planPrec)}</p>
@@ -166,7 +166,8 @@ const Planes = () => {
                         </div>
 
                         <form className={` min-h-[28rem] mr-3 sm:mr-4 md:mr-5 lg:mr-6 ml-3 sm:ml-4 md:ml-0 lg:ml-0 flex flex-col items-center justify-center py-4`} >
-                            <img src={webpayplus.src} alt='' width='178' className={` mb-6 `} />
+                            <p>
+                                <img src={webpayplus.src} alt='' width='178' className={` mb-6 `} /></p>
                             <p className={` block w-full relative font-normal font-condensed bg-white border-solid border-2 border-black border-opacity-10 rounded-xl `}>
                                 <input className={` block w-full p-2 bg-transparent text-2xl text-left `} type='text' name='name' value={formData.name} onChange={handleInputChange} placeholder='Nombre' /></p>
                             {errors.name && (<p data-aos-once="true" data-aos="fade" className={` block w-full px-2 mt-1 ml-0 md:ml-6 text-red-500 text-md lg:text-lg text-left `}>{errors.name}</p>)}

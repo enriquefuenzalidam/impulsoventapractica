@@ -1,6 +1,7 @@
 
 'use client';
 import impulsoVentasLogo from 'public/images/logo-dba.ico';
+import caretDown from 'public/images/caret-down.svg';
 
 const smoothScrollTo = (element, duration) => {
     const startPosition = window.scrollY;
@@ -45,17 +46,22 @@ const Cover = () => {
             <div className="absolute top-0 lef-0 bg-black bg-opacity-40 h-full w-full" />
             <div className=" relative max-w-screen-lg mx-auto min-h-[calc(100vh)] h-full w-full flex flex-col justify-center items-left ">
                 <div>
-                    <h3 className=" inline-block m-8 py-2 px-4 rounded-lg border-4 border-solid border-[#c92859] bg-transparent text-[#d02550] uppercase font-extrabold text-lg">Bases de datos</h3>
+                    <h3 className=" inline-block m-8 text-[#0B0B5C] uppercase font-extrabold text-xl">Bases de datos</h3>
                 </div>
                 <div className={` mx-8 mb-8 `}>
                     <img className=" inline-block w-10 sm:w-12 md:w-16 h-auto align-bottom" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" />
                     <span className="inline-block text-3xl sm:text-4xl md:text-6xl font-normal md:font-extralight tracking-tight no-underline ml-2 text-white text-opacity-60 md:text-opacity-100 capitalize font-Roboto">I<em>mpulso</em> V<em>entas</em></span>
                 </div>
-                <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-condensed ">La empresa que <span className={` whitespace-nowrap `}>impulsa tus ventas</span></h2>
-                <p className=" mx-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-condensed ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
-                <p className=" m-8 mb-8 ">
-                    <span onClick={() => { handleScroll('productos'); }} className=" cursor-pointer py-2 mt-8 px-4 mr-4 rounded-lg bg-[#0d6efd] hover:bg-[#0a58ca] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Conoce nuestros planes</span>
-                    <span onClick={() => { handleScroll('contactanos'); }} className=" cursor-pointer py-2 px-4 mt-8 rounded-lg bg-[#198754] hover:bg-[#157347] text-md text-white inline-block no-underline transition-all duration-300 ease-in-out">Contáctanos</span>
+                <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-Roboto ">La empresa que <span className={` whitespace-nowrap `}>impulsa tus ventas</span></h2>
+                <p className=" mx-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-Roboto ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
+                <p className=" mt-8 ml-8 ">
+                    <span onClick={() => { handleScroll('productos'); }} className=" cursor-pointer text-md text-[#4ae7ff] font-bold opacity-60 inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
+                        <img src={caretDown.src} alt='' className={` align-bottom inline-block mr-3 h-auto w-4 `} />
+                        Conoce nuestros planes</span>
+                    <span className={` text-md text-white font-extrabold opacity-60 hidden sm:inline-block w-16 `} > </span> 
+                    <span onClick={() => { handleScroll('contactanos'); }} className=" cursor-pointer text-md text-[#4ae7ff] font-bold opacity-60 inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
+                        <img src={caretDown.src} alt='' className={` align-bottom inline-block mr-3 h-auto w-4 `} />
+                        Contáctanos</span>
                 </p>
             </div>
         </section>

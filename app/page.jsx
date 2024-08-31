@@ -11,11 +11,11 @@ import Cover from 'components/cover';
 
 export default function Page() {
     return (
-        <main className={`  font-condensed bg-white`}>
+        <main className={` font-Roboto bg-white`}>
 
             <Cover />
 
-            <section className=" w-full">
+            <section className="relative w-full">
 
                 <div className=" max-w-screen-lg m-auto flex flex-col-reverse sm:flex-col-reverse md:flex-row lg:flex-row ">
                     <div data-aos-once="true" data-aos="zoom-in" className=" w-full sm:w-full md:w-5/12 lg:w-5/12 my-0 sm:my-0 md:my-4 lg:my-4">
@@ -25,20 +25,23 @@ export default function Page() {
                     </div>
                     <div data-aos-once="true" data-aos="fade-left" id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <div className=" mx-8 ">
-                            <h3 className=" text-4xl font-bold text-center pt-20 pb-3">Quiénes Somos</h3>
-                            <p className=" text-lg font-medium pb-20 text-left indent-5 hyphens-auto ">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
+                            <h3 className=" text-4xl font-bold text-center pt-20 pb-3 text-[#0B0B5C]">Quiénes Somos</h3>
+                            <p className=" text-lg font-medium pb-20 text-left indent-5 hyphens-auto opacity-80">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
                         </div>
                     </div>
                 </div>
 
+                <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.03)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-3 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
+
             </section>
 
             <section id="productos" className=" bg-[#449DF7] bg-opacity-20 pt-20 relative ">
-            <div className={` absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-transparent `} />
+{/*            <div className={` absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-transparent `} />
             <div className={` absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-transparent `} />
-
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center pb-3">Productos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center pb-8">Conoce nuestros productos.</p>
+*/}
+                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center pb-3 text-[#0B0B5C]">Productos</h3>
+                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center pb-8 opacity-80">Conoce nuestros productos.</p>
                 <Planes />
 
             <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.03)] from-transparent `} />
@@ -47,8 +50,8 @@ export default function Page() {
             </section>
 
             <section id="contactanos" className=" pt-20 pb-10 ">
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3">Contáctanos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
+                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3 text-[#0B0B5C]">Contáctanos</h3>
+                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8 opacity-80">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
                 <div data-aos-once="true" data-aos="fade-down" className=" max-w-screen-lg pt-6 px-4 mx-auto ">
                     <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-xl border-black border-opacity-10">
                         <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
