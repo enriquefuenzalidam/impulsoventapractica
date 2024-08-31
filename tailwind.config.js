@@ -6,7 +6,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
+                'nav-gradient': "linear-gradient(to bottom,  rgba(11,11,92,1),  rgba(11,11,92,0.96),  rgba(11,11,92,0.95),  rgba(11,11,92,0.94),  rgba(11,11,92,0.93),  rgba(11,11,92,0.92),  rgba(11,11,92,0.91),  rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.9), rgba(11,11,92,0.6), rgba(11,11,92,0.5), rgba(11,11,92,0.2), rgba(11,11,92,0))"
             },
             colors: {
                 neutral: colors.neutral

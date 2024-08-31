@@ -54,16 +54,19 @@ const Cover = () => {
                 </div>
                 <h2 className=" mx-8 mb-6 uppercase text-white text-opacity-80 text-3xl font-bold leading-relaxed font-Roboto ">La empresa que <span className={` whitespace-nowrap `}>impulsa tus ventas</span></h2>
                 <p className=" mx-8 text-white text-opacity-80 text-xl font-medium leading-relaxed font-Roboto ">Potencia tu negocio con bases de datos precisas y actualizadas de Impulso de Ventas. Accede a información confiable y relevante para alcanzar tus objetivos comerciales. Amplía tu red de clientes y segmenta tus campañas de marketing con precisión y eficacia.</p>
-                <p className=" mt-8 ml-8 ">
-                    <span onClick={() => { handleScroll('productos'); }} className=" cursor-pointer text-md text-[#4ae7ff] font-bold opacity-60 inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
+                <p className=" my-8 ml-8 ">
+                    <span onClick={() => { handleScroll('productos'); }} className=" mt-3 cursor-pointer text-md text-[#4ae7ff] font-bold opacity-80 inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
                         <img src={caretDown.src} alt='' className={` align-bottom inline-block mr-3 h-auto w-4 `} />
                         Conoce nuestros planes</span>
-                    <span className={` text-md text-white font-extrabold opacity-60 hidden sm:inline-block w-16 `} > </span> 
-                    <span onClick={() => { handleScroll('contactanos'); }} className=" cursor-pointer text-md text-[#4ae7ff] font-bold opacity-60 inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
+                    <span onClick={() => { handleScroll('contactanos'); }} className=" sm:ml-16 mt-3 sm:mt-0 cursor-pointer text-md text-[#4ae7ff] font-bold opacity-80 block sm:inline-block transition-all duration-300 ease-in-out uppercase hover:-translate-y-1 hover:opacity-100">
                         <img src={caretDown.src} alt='' className={` align-bottom inline-block mr-3 h-auto w-4 `} />
                         Contáctanos</span>
                 </p>
             </div>
+
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.08)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-5 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
+
         </section>
     );
 }

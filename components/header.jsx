@@ -71,21 +71,18 @@ export function Header() {
       }, []);
     
     return (
-        <nav id="navbar" className="shadow-md hidden opacity-0 bg-[#0B0B5C] fixed top-0 left-0 w-full z-50 bg-opacity-80 transition-all -translate-y-full ease-in-out duration-[618ms]">
+        <nav id="navbar" className=" hidden opacity-0 bg-nav-gradient fixed top-0 left-0 w-full z-50 bg-opacity-100 transition-all -translate-y-full ease-in-out duration-[618ms]">
             <section className="max-w-screen-lg mx-auto py-3 px-6 flex items-center">
-                <div className="w-full sm:w-full md:w-4/12 lg:w-4/12 flex flex-row items-center">
-                    <p className="inline-block w-2/12 sm:w-2/12 md:w-auto lg:w-auto "><img className=" inline-block h-8 w-auto" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" /></p>
-                    <p className="inline-block w-8/12 sm:w-8/12 md:w-auto lg:w-auto text-center sm:text-center md:text-left lg:text-left ml-2"><span className="inline-block sm:inline-block md:inline-block lg:inline-block font-light tracking-wide no-underline ml-1 text-2xl text-[#caf8ff] text-opacity-80 capitalize cursor-pointer font-Roboto" onClick={() => handleScroll('inicio')}>I<em>mpulso</em> V<em>entas</em></span></p>
-                    <div className="w-2/12 sm:w-2/12 md:w-auto lg:w-auto inline-block sm:inline-block md:hidden lg:hidden text-right">
-                        <p className="inline-block cursor-pointer" onClick={() => setIsOpen(!isOpen)}><img className=" inline-block h-8 w-auto" src={hamburgerMenu.src} alt="Menu" /></p>
-                    </div>
+                <div className="w-full flex flex-row items-center">
+                    <p className="inline-block w-auto " onClick={() => setIsOpen(!isOpen)}><img className=" inline-block h-8 w-auto" src={impulsoVentasLogo.src} alt="Impulso Ventas Logo" /></p>
+                    <p className="inline-block w-auto text-center sm:text-center md:text-left lg:text-left ml-2"><span className="inline-block sm:inline-block md:inline-block lg:inline-block font-light tracking-wide no-underline ml-1 text-2xl text-[#caf8ff] text-opacity-80 capitalize cursor-pointer font-Roboto" onClick={() => setIsOpen(!isOpen)}>I<em>mpulso</em> V<em>entas</em></span></p>
                 </div>
 
                 {!!navItems?.length && (
-                <ul className="hidden sm:hidden md:flex lg:flex justify-end w-8/12 text-right text-xl ">
+                <ul className="hidden justify-end w-8/12 text-right text-xl ">
                     {navItems.map((item, index) => (
                         <li key={index} className=" inline-block text-right pl-6">
-                            <span onClick={() => handleScroll(item.elementId)} className="cursor-pointer inline-block no-underline text-nowrap text-[#caf8ff] text-opacity-70 hover:text-opacity-100 font-Roboto font-normal" > {item.linkText} </span>
+                            <span onClick={() => handleScroll(item.elementId)} className="cursor-pointer inline-block no-underline text-nowrap text-[#caf8ff] text-opacity-70 hover:text-opacity-100 hover:font-medium font-Roboto font-normal" > {item.linkText} </span>
                         </li>
                     ))}
                 </ul>
@@ -94,12 +91,12 @@ export function Header() {
             </section>
 
             {!!navItems?.length && (
-            <ul className={` lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-                isOpen ? 'max-h-screen opacity-100 py-5 px-6' : 'max-h-0 opacity-0'
+            <ul className={` max-w-screen-lg mx-auto overflow-hidden transition-all duration-300 ease-in-out ${
+                isOpen ? 'max-h-screen opacity-100 pt-5 px-6 pb-16' : 'max-h-0 opacity-0'
             }`}>
                 {navItems.map((item, index) => (
-                    <li key={index} className="py-2">
-                        <span onClick={() => { setIsOpen(!isOpen); handleScroll(item.elementId); }} className="cursor-pointer block no-underline text-[#caf8ff] text-opacity-70 hover:text-opacity-100  font-Roboto text-xl">
+                    <li key={index} className={` block py-2 `}>
+                        <span onClick={() => { setIsOpen(!isOpen); handleScroll(item.elementId); }} className=" inline-block cursor-pointer no-underline text-[#caf8ff] text-opacity-70 hover:text-opacity-100 hover:font-medium font-Roboto text-xl">
                             {item.linkText}
                         </span>
                     </li>

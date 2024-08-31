@@ -31,8 +31,8 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.03)] from-transparent `} />
-            <div className={` absolute top-full left-0 -translate-y-full w-full h-3 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
+                <div className={` absolute top-full left-0 -translate-y-full w-full h-12 bg-gradient-to-b to-[rgba(0,0,0,0.1)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-2 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
 
             </section>
 
@@ -49,11 +49,16 @@ export default function Page() {
 
             </section>
 
-            <section id="contactanos" className=" pt-20 pb-10 ">
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3 text-[#0B0B5C]">Contáctanos</h3>
-                <p className=" max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8 opacity-80">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
-                <div data-aos-once="true" data-aos="fade-down" className=" max-w-screen-lg pt-6 px-4 mx-auto ">
-                    <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-xl border-black border-opacity-10">
+            <section id="contactanos" className=" relative pt-20 pb-10 ">
+
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-24 bg-gradient-to-b to-[rgba(0,0,0,0.1)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-6 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
+            <div className={` absolute top-full left-0 -translate-y-full w-full h-2 bg-gradient-to-b to-[rgba(0,0,0,0.1)] from-transparent `} />
+
+                <h3 className=" relative max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3 text-[#0B0B5C]">Contáctanos</h3>
+                <p className=" relative max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8 opacity-80">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
+                <div data-aos-once="true" data-aos="fade-down" className="relative max-w-screen-lg pt-6 px-4 mx-auto ">
+                    <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-2xl border-black border-opacity-10 ">
                         <div className="grid grid-raws-3 grid-cols-1 sm:grid-raws-3 sm:grid-cols-1 md:grid-raws-3 md:grid-cols-3 lg:grid-raws-1 lg:grid-cols-3 items-start justify-center text-left sm:text-left md:text-center font-medium text-black text-lg">
                             <p className="inline-block pb-6"><Image src={envelope} className=" inline-block h-4 w-auto mr-2" alt="envelope" /> invchincol@gmail.com</p>
                             <p className="inline-block pb-6"><Image src={locationDot} className=" inline-block h-4 w-auto mr-2" alt="locationDot" /> Los Jesuitas 881, Providencia</p>
