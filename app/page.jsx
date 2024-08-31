@@ -25,7 +25,7 @@ export default function Page() {
                     </div>
                     <div data-aos-once="true" data-aos="fade-left" id="quienessomos" className=" w-full sm:w-full md:w-7/12 lg:w-7/12 my-0 sm:my-0 md:my-4 lg:my-4">
                         <div className=" mx-8 ">
-                            <h3 className=" text-4xl font-bold text-center pt-20 pb-3 text-[#0B0B5C]">Quiénes Somos</h3>
+                            <h3 className=" text-3xl lg:text-4xl font-bold text-center pt-20 pb-3 text-[#0B0B5C]">Quiénes Somos</h3>
                             <p className=" text-lg font-medium pb-20 text-left indent-5 hyphens-auto opacity-80">En Impulso Ventas nos dedicamos a proporcionar soluciones de datos precisas y actualizadas para potenciar el crecimiento de tu negocio. Con un enfoque en la calidad y la fiabilidad, ofrecemos bases de datos de personas y empresas que impulsan tus estrategias de marketing y ventas. Nuestro compromiso es brindarte información confiable y relevante para que puedas alcanzar tus objetivos comerciales con éxito.</p>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ export default function Page() {
 {/*            <div className={` absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-transparent `} />
             <div className={` absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-transparent `} />
 */}
-                <h3 className=" max-w-screen-lg m-auto text-4xl font-bold text-center pb-3 text-[#0B0B5C]">Productos</h3>
+                <h3 className=" max-w-screen-lg m-auto text-3xl lg:text-4xl font-bold text-center pb-3 text-[#0B0B5C]">Productos</h3>
                 <p className=" max-w-screen-lg m-auto text-lg font-medium text-center pb-8 opacity-80">Conoce nuestros productos.</p>
                 <Planes />
 
@@ -55,7 +55,7 @@ export default function Page() {
             <div className={` absolute top-full left-0 -translate-y-full w-full h-6 bg-gradient-to-b to-[rgba(0,0,0,0.2)] from-transparent `} />
             <div className={` absolute top-full left-0 -translate-y-full w-full h-2 bg-gradient-to-b to-[rgba(0,0,0,0.1)] from-transparent `} />
 
-                <h3 className=" relative max-w-screen-lg m-auto text-4xl font-bold text-center px-4 pb-3 text-[#0B0B5C]">Contáctanos</h3>
+                <h3 className=" relative max-w-screen-lg m-auto text-3xl lg:text-4xl font-bold text-center px-4 pb-3 text-[#0B0B5C]">Contáctanos</h3>
                 <p className=" relative max-w-screen-lg m-auto text-lg font-medium text-center px-4 pb-8 opacity-80">Comunicate con nosotros a través de alguno de nuestros canales. Estaremos para responder todas tus dudas.</p>
                 <div data-aos-once="true" data-aos="fade-down" className="relative max-w-screen-lg pt-6 px-4 mx-auto ">
                     <div className=" mx-auto px-4 pb-4 pt-6 border-solid border-2 rounded-2xl border-black border-opacity-10 ">

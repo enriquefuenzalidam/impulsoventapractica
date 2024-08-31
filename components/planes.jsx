@@ -120,12 +120,12 @@ const Planes = () => {
                     {planesJson.map((item, index) => (
                         <div key={index} data-aos-once="true" data-aos="fade-down" className=" flex flex-col h-full">
                             <div className=" flex-grow bg-white border-solid border-t-2 border-l-2 border-r-2 rounded-t-xl border-black border-opacity-10 p-6 text-center">
-                                <h4 className=" text-3xl text-black font-bold mb-4">{item.planNombr}</h4>
+                                <h4 className=" text-xl md:text-2xl text-black font-bold mb-4">{item.planNombr}</h4>
                                 <p><img className=" m-auto" src={fondoVentas.src} alt="ventas" /></p>
                                 <p className=" text-lg text-black font-medium text-left hyphens-auto indent-5 opacity-80">{item.planDescr}</p>
                             </div>
                             <div className="bg-[#F7F7F7] border-solid border-2 border-black border-opacity-10 rounded-b-xl p-6 text-center">
-                                <p className=" text-3xl text-black font-bold ">CLP $ {new Intl.NumberFormat('es-CL').format(item.planPrec)}</p>
+                                <p className="  text-xl md:text-2xl text-black font-bold ">CLP $ {new Intl.NumberFormat('es-CL').format(item.planPrec)}</p>
                                 <p className=" mt-6">
                                 {!isEmpty ? (
                                     <span
