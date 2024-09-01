@@ -44,7 +44,7 @@ const linksCols = [
 
 export function Footer() {
     return (
-        <footer data-aos="fade-up" data-aos-once="true" className=" bg-[#0B0B5C]">
+        <footer className=" bg-[#0B0B5C]">
           {/*
             <section className=" max-w-screen-lg mx-auto">
               <div className="w-full pl-[25%] sm:pl-[20%] md:pl-[20%] lg:pl-[11%] pr-0 pt-10 pb-0">
@@ -61,7 +61,7 @@ export function Footer() {
               </div>
             </section>
             */}
-            <section className=" p-3">
+            <section data-aos="fade-left" data-aos-once="true" className=" p-3">
             <p className=" max-w-screen-lg mx-auto text-left font-bold text-white text-opacity-40 text-md">© Impulso Ventas</p>
             </section>
         </footer>
