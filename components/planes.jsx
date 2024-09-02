@@ -152,10 +152,10 @@ const Planes = () => {
                 <div ref={compraBlock} >
 
                     <div className={` shadow-lg shadow-[rgba(0,0,0,0.4)] relative bg-[#F7F7F7] border-2 border-solid border-black border-opacity-10 rounded-xl transition-all ease-in-out duration-700 grid grid-cols-1 md:grid-cols-2 `}>
-                        <div className={` min-h-[28rem] w-full relative mx-auto flex items-center justify-center `}>
-                            <div className={` bg-[url('/images/fondo-ventas2.png')] bg-bottom bg-no-repeat absolute inset-0 w-full h-full cover opacity-20`} />
+                        <div className={` min-h-[14rem] w-full relative mx-auto flex items-center justify-center `}>
+                            <div className={` bg-[url('/images/fondo-ventas2.png')] bg-bottom bg-contain bg-no-repeat absolute inset-0 w-full h-auto mt-8 cover opacity-20`} />
 
-                            { !isEmpty && (<div className={` relative px-2 md:px-8 font-medium text-black text-lg lg:text-xl text-center flex flex-col `} >
+                            { !isEmpty && (<div className={` relative px-4 md:px-8 pt-8 font-medium text-black text-lg lg:text-xl text-center flex flex-col `} >
                             
                                 <p className={` block text-lg uppercase mb-2`}>Usted está comprando el plan</p>
                                 <p className={` block text-3xl font-black mb-2 `}>{items[0]?.planNombr}</p>
