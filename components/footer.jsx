@@ -61,8 +61,8 @@ export function Footer() {
               </div>
             </section>
             */}
-            <section data-aos="fade-left" data-aos-once="true" className=" p-3">
-            <p className=" max-w-screen-lg mx-auto text-left font-bold text-white text-opacity-40 text-md">© Impulso Ventas</p>
+            <section className=" p-3">
+            <p data-aos="fade-left" data-aos-once="true" className=" max-w-screen-lg mx-auto text-left font-bold text-white text-opacity-40 text-md">© Impulso Ventas</p>
             </section>
         </footer>
     );
